@@ -19,10 +19,12 @@ class Graph:
     def is_connected(self, node1, node2):
         return True if self.nodes[node1][node2] == 1 else False
 
+    def init_search(self):
+        self.visited = [0] * (self.N_node + 1)
+
     def BFS(self, init_node):
-        visited = [0] * (self.N_node + 1)
         queue = [init_node]
-        visited[init_node] = 1
+        self.visited[init_node] = 1
 
         while len(queue) != 0:
             node = queue[0]
@@ -32,23 +34,18 @@ class Graph:
 
             for i in range(1, self.N_node + 1):
                 if self.nodes[node][i] == 1:
-                    if visited[i] == 0:
-                        visited[i] = 1
+                    if self.visited[i] == 0:
+                        self.visited[i] = 1
                         queue.append(i)
 
-    def DFS(self, init_node):
-        visited = [0] * (self.N_node + 1)
-
-        self.DFScall(init_node, visited)
-
-    def DFScall(self, node, visited):
+    def DFS(self, node):
         print(node, end=' ')
-        visited[node] = 1
+        self.visited[node] = 1
 
         for i in range(1, self.N_node + 1):
             if self.nodes[node][i] == 1:
-                if visited[i] == 0:
-                    self.DFScall(i, visited)
+                if self.visited[i] == 0:
+                    self.DFS(i)
 
 
 
@@ -57,6 +54,8 @@ for _ in range(N_edge):
     n1, n2 = map(int, sys.stdin.readline().split())
     graph.add_edge(n1, n2)
 
+graph.init_search()
 graph.DFS(init_node)
 print()
+graph.init_search()
 graph.BFS(init_node)
