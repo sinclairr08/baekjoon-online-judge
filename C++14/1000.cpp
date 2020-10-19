@@ -1,3 +1,6 @@
+// https://www.acmicpc.net/problem/1000
+// 20201019
+
 #include <stdio.h>
 
 int main(){
