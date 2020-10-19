@@ -1,4 +1,6 @@
 /.idea/
+/.vscode/
 git format.txt
 py format.txt
-test.py
+/Python3/test.py
+/C++14/test.cpp
