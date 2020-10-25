@@ -3,24 +3,24 @@
 
 import sys
 
+N, M, B = map(int, sys.stdin.readline().split())
 
 def calc_blocks(blocks, height):
     cost = 0
     req_block = 0
 
-    for block in blocks:
-        D = block - height
+    for i in range(N):
+        for j in range(M):
+            D = blocks[i][j] - height
 
-        if D > 0:
-            cost += 2 * D
-            req_block -= D
-        elif D < 0:
-            cost -= D
-            req_block -= D
+            if D > 0:
+                cost += 2 * D
+                req_block -= D
+            elif D < 0:
+                cost -= D
+                req_block -= D
 
     return cost, req_block
-
-N, M, B = map(int, sys.stdin.readline().split())
 
 blocks = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 
@@ -29,28 +29,15 @@ min_H = min(map(min, blocks))
 smallest_cost = 999999999
 smallest_H = 0
 
-flattened = sum(blocks, [])
-
 
 for H in range(min_H, max_H + 1):
-    cost, req_block = calc_blocks(flattened, H)
+    cost, req_block = calc_blocks(blocks, H)
 
     if req_block > B:
-        continue
+        break
 
     elif cost <= smallest_cost:
             smallest_cost = cost
             smallest_H = H
 
 print(smallest_cost, smallest_H)
-
-
-
-
-
-
-
-
-
-
-

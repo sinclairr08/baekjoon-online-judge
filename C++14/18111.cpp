@@ -53,7 +53,7 @@ int main(){
         if (req_block > B){
             cost = 0;
             req_block = 0;
-            continue;
+            break;
         }
         
         else if(cost <= smallest_cost){
