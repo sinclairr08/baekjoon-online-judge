@@ -3,18 +3,18 @@
 
 import sys
 
-# Maximum number of exponent where base is 10
+# Maximum exponent
 MAX_EXP = 10
 
-# list of 10^n
+# List of 10^n
 exp_of_10 = [10 ** exp for exp in range(MAX_EXP + 1)]
 
-# The number of 'each' digit between 0000...0 ~ 9999...9
+# The number of 'each' digit between 0000...0 and 9999...9
 digits_under_exp_of_10 = [(10 ** exp) * (exp + 1) for exp in range(MAX_EXP + 1)]
 
-# The number of number which the first digit is zero and second digit is nonzero
-# ex) [The number of 01...09, The number of 010...099, ... ]
-# First of this list must be 1, because "0" can only satisfy condition
+# The number of numbers which are the first digit is zero and second digit is nonzero
+# ex) [The number of {01...09}, The number of {010...099}, ... ]
+# First of list must be 1(= The number of {0})
 nonzero_under_exp_of_10 = [exp_of_10[i + 1] - exp_of_10[i] for i in range(len(exp_of_10) - 1)]
 nonzero_under_exp_of_10.insert(0, 1)
 
@@ -48,44 +48,43 @@ def cnt_digits(number):
         digit = copy_number - ((copy_number // 10) * 10)
         number_list.insert(0, digit)
 
-        digit_list[digit] += 1      # This must be considered because the input number is not calculated at below
+        digit_list[digit] += 1      # This must be considered because the input number is not considered at below
 
         copy_number //= 10
 
-    # Indicates how long the number is ex) number : 1234, max_exp : 4
+    # Indicates how long the number is
+    # ex) number : 1234, max_exp : 4
     max_exp = len(number_list)
 
-    # In this for loop, by repeatedly cutting the number, it calculates how many digits were appeared
-    # We use the exponent as index, from 0 to max_exp - 1
+    # In this for loop, by repeatedly cutting the number, it counts how many digits were appeared
     for cur_exp in range(max_exp):
 
-        # Cutting is proceed by removing the remainder of 10^n
+        # Cutting is proceed by removing the remainder divided by 10^n
         # 7542 -> 7540 -> 7500 -> 7000 -> 0000
-        cut_number = number  - (number % exp_of_10[cur_exp + 1])
+        cut_number = number - (number % exp_of_10[cur_exp + 1])
 
-        # Calculates how many numbers between original number and cut number
-        # This difference will be used to calculate the upper level of digit
+        # Counts how many numbers between original number and cut number
         cnts = (number - cut_number)
 
-        # The digits that have higher index than current place
+        # The digits that have higher exponent than current exponent
         upper_numbers = number_list[:max_exp - cur_exp - 1]
 
-        # The current digit that we are looking for
+        # The digit of current exponent
         cur_number = number_list[max_exp - cur_exp - 1]
 
-        # If there is no difference between numbers and cut one, it does not require calculation
+        # If there is no difference between numbers and cut one, we don't have to count anything in current exponent
         if cnts == 0:
             continue
 
-        # For the digits which is upper than current exponent, cnts will be added.
+        # For the digits which is upper than current exponent, count as much as cnts
         for upper_number in upper_numbers:
             digit_list[upper_number] += cnts
 
-        # If the current digit is I, then 0, 1, ... ,I-1 digit must add the 10 ^ (current exponent)
+        # If the current digit is I, then 0, 1, ... ,I-1 digit must count 10 ^ (current exponent)
         for und_cur_number in range(cur_number):
             digit_list[und_cur_number] += exp_of_10[cur_exp]
 
-        # If the current exponent is not zero, than digits of lower exponent must be add
+        # If the current exponent is not zero, then digits of lower exponent must be count
         # That is exactly same with (digits_under_exp_of_10) * (current digit)
         if cur_exp != 0:
             list_sum(digit_list, [digits_under_exp_of_10[cur_exp - 1] * cur_number] * 10)
@@ -93,11 +92,12 @@ def cnt_digits(number):
         # Cut the number and repeat this procedure
         number = cut_number
 
-    # Delete the cases where the first digit is starts from 0
+    # Delete zero of lower exponent numbers
     # ex) 0000, 0001, ..., 0999
     deleted_list = [0] * 10
 
     # Divide cases as 000...0, 000...#, 0##...# => Use "nonzero_under_exp_of_10" list
+    # For each case, calculate (The number of zero) * (The number of possible nonzero)
     for del_exp in range(max_exp):
         deleted_list[0] += ((del_exp + 1) * (nonzero_under_exp_of_10[max_exp - del_exp - 1]))
 
