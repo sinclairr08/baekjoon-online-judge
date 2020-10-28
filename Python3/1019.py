@@ -15,8 +15,8 @@ digits_under_exp_of_10 = [(10 ** exp) * (exp + 1) for exp in range(MAX_EXP + 1)]
 # The number of numbers which are the first digit is zero and second digit is nonzero
 # ex) [The number of {01...09}, The number of {010...099}, ... ]
 # First of list must be 1(= The number of {0})
-nonzero_under_exp_of_10 = [exp_of_10[i + 1] - exp_of_10[i] for i in range(len(exp_of_10) - 1)]
-nonzero_under_exp_of_10.insert(0, 1)
+zero_under_exp_of_10 = [exp_of_10[i + 1] - exp_of_10[i] for i in range(len(exp_of_10) - 1)]
+zero_under_exp_of_10.insert(0, 1)
 
 
 # Add second list to the first list
@@ -25,14 +25,6 @@ def list_sum(list1, list2):
 
     for i in range(len(list1)):
         list1[i] += list2[i]
-
-
-# Subtract second list to the first list
-def list_minus(list1, list2):
-    assert len(list1) == len(list2)
-
-    for i in range(len(list1)):
-        list1[i] -= list2[i]
 
 
 # Count every digits between 1 to given number
@@ -92,16 +84,15 @@ def cnt_digits(number):
         # Cut the number and repeat this procedure
         number = cut_number
 
-    # Delete zero of lower exponent numbers
-    # ex) 0000, 0001, ..., 0999
-    deleted_list = [0] * 10
+    # Delete leading zeros
+    leading_zero = 0
 
-    # Divide cases as 000...0, 000...#, 0##...# => Use "nonzero_under_exp_of_10" list
-    # For each case, calculate (The number of zero) * (The number of possible nonzero)
+    # Divide cases as 000...0, 000...#, 0##...# => Use "zero_under_exp_of_10" list
+    # For each case, calculate (The number of zero) * (The number of second digit is nonzero)
     for del_exp in range(max_exp):
-        deleted_list[0] += ((del_exp + 1) * (nonzero_under_exp_of_10[max_exp - del_exp - 1]))
+        leading_zero += ((del_exp + 1) * (zero_under_exp_of_10[max_exp - del_exp - 1]))
 
-    list_minus(digit_list, deleted_list)
+    digit_list[0] -= leading_zero
 
     return digit_list
 
