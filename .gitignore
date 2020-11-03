@@ -2,5 +2,6 @@
 /.vscode/
 git format.txt
 py format.txt
+C++ format.txt
 /Python3/test.py
 /C++17/test.cpp
