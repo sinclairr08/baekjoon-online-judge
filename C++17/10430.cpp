@@ -1,0 +1,17 @@
+// https://www.acmicpc.net/problem/10430
+// First Written : 20210118
+// Last Modified : 20210118
+
+#include <cstdio>
+
+int main(){
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    printf("%d\n", (a + b) % c);
+    printf("%d\n", ((a % c) + (b % c)) % c);
+    printf("%d\n", (a * b) % c);
+    printf("%d\n", ((a % c) * (b % c)) % c);
+
+    return 0;
+}
