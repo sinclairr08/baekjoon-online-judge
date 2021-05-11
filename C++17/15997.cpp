@@ -6,16 +6,24 @@
 #include <cstring>
 #include <algorithm>
 
-// 1 : ¾Õ ÆÀ ½Â¸®, 0 : ¹«½ÂºÎ, -1 : µÞ ÆÀ ½Â¸®
-struct total_result{
-    // 0 vs 1, 0 vs 2, 0 vs 3, 1 vs 2, 1 vs 3, 2 vs 3
-    int result[6]; 
-    double prob;
-};
+enum match_result {win = 0, tie = 1, lose = 2, none};
 
-// countries
-char contruies[4][11];
+// Save the country names
+char countries[4][11];
 
+// Save the match results
+enum match_result results[6] = {none, };
+
+// Saves the probablity for each math
+double predicts[6][3] = {.0};
+
+// Saves the total probablity for each country
+double total_probs[4] = {.0};
+
+// Pair to sort the countires as points
+std::pair<int, int> pts[4];
+
+// Input : country pair, Output : match number
 int pack(std::pair<int, int> con_pair){
     if(con_pair.first == 0 && con_pair.second == 1)
         return 0;
@@ -30,11 +38,11 @@ int pack(std::pair<int, int> con_pair){
     else if(con_pair.first == 2 && con_pair.second == 3)
         return 5;
     else{
-        printf("FATAL ERROR!_e2\n");
         exit(-1);
     }
 }
 
+// Input : match number, Output : country pair
 std::pair<int, int> unpack(int idx){
     if(idx == 0)
         return std::pair<int,int>(0, 1);
@@ -49,56 +57,119 @@ std::pair<int, int> unpack(int idx){
     else if(idx == 5)
         return std::pair<int,int>(2, 3);
     else{
-        printf("FATAL ERROR!_e3\n");
         exit(-1);
     }
 }
 
-void clear_points(std::pair<int, int>* pts){
+// Initialize the points
+void clear_points(){
     for(int i = 0; i < 4; i++){
-        pts[i].first = 0;
-        pts[i].second = i;
+        pts[i].first = i;
+        pts[i].second = 0;
     }
 }
 
+// For sort function
 bool pair_comp(std::pair<int, int> p1, std::pair<int, int> p2){
-    return p1.first > p2.first;
+    return p1.second > p2.second;
 }
 
-void get_points(int result[6], std::pair<int, int>* pts){
+// Set the points for each country as the result of match
+void set_points(){
     std::pair<int, int> cons;
     for(int i = 0; i < 6; i++){
         cons = unpack(i);
 
-        if(result[i] == 1){
-            pts[cons.first].first += 3;
+        if(results[i] == win){
+            pts[cons.first].second += 3;
         }
 
-        else if(result[i] == 0){
-            pts[cons.first].first += 1;
-            pts[cons.second].first += 1;
+        else if(results[i] == tie){
+            pts[cons.first].second += 1;
+            pts[cons.second].second += 1;
         }
 
         else{
-            pts[cons.second].first += 3;
+            pts[cons.second].second += 3;
         }
     }
 
     std::sort(pts, pts+4, pair_comp);
 }
 
-
-int find_idx_contuires_as_name(char* name){
+// Find index of country as its name
+int find_idx_countries_as_name(char* name){
     for(int i = 0; i < 4; i++){
-        if(strcmp(name, contruies[i]) == 0)
+        if(strcmp(name, countries[i]) == 0)
             return i;
     }
 
-    printf("FATAL ERROR!_e1\n");
     exit(-1);
-
 }
 
+// Use dfs for exhaustive search
+void dfs(double prob, int depth){
+    if(depth != 6){
+        if(predicts[depth][win] != 0.0){
+            results[depth] = win;
+            dfs(prob * predicts[depth][win], depth + 1);
+        }
+
+
+        if(predicts[depth][tie] != 0.0){
+            results[depth] = tie;
+            dfs(prob * predicts[depth][tie], depth + 1);
+        }
+
+        if(prob != 0.0){
+            results[depth] = lose;
+            dfs(prob * predicts[depth][lose], depth + 1);
+        }
+
+        return;
+    }
+
+    else{
+        if(prob == 0.0)
+            return;
+        
+        clear_points();
+        set_points();
+
+        if(pts[0].second == pts[1].second && pts[1].second == pts[2].second && pts[2].second == pts[3].second){
+            for(int i = 0; i < 4; i++){
+                total_probs[i] += prob / 2;
+            }
+        }
+
+        else if(pts[0].second == pts[1].second && pts[1].second == pts[2].second){
+            total_probs[pts[0].first] += 2 * prob / 3;
+            total_probs[pts[1].first] += 2 * prob / 3;
+            total_probs[pts[2].first] += 2 * prob / 3;
+        }
+        
+        else if(pts[1].second == pts[2].second && pts[2].second == pts[3].second){
+            total_probs[pts[0].first] += prob;
+            total_probs[pts[1].first] += prob / 3;
+            total_probs[pts[2].first] += prob / 3;
+            total_probs[pts[3].first] += prob / 3;
+        }
+        
+        else if(pts[1].second == pts[2].second){
+            total_probs[pts[0].first] += prob;
+            total_probs[pts[1].first] += prob / 2;
+            total_probs[pts[2].first] += prob / 2;
+        }
+
+        else{
+            total_probs[pts[0].first] += prob;
+            total_probs[pts[1].first] += prob;
+        }
+
+        return;
+
+    }
+}
 
 int main(){
     char con_1[11];
@@ -107,24 +178,22 @@ int main(){
     int idx_1;
     int idx_2;
     bool reversed;
-    double w_r, d_r, l_r;
-    double predicts[6][3] = {.0};
-    double total_probs[4] = {.0};
+    double w_r, t_r, l_r;
 
     for(int i = 0; i < 4; i++){
-        scanf("%s", contruies[i]);
+        scanf("%s", countries[i]);
     }
 
     for(int i = 0; i < 6; i++){
         scanf("%s", con_1);
         scanf("%s", con_2);
         scanf("%lf", &w_r);
-        scanf("%lf", &d_r);
+        scanf("%lf", &t_r);
         scanf("%lf", &l_r);
         
         reversed = false;
-        idx_1 = find_idx_contuires_as_name(con_1);
-        idx_2 = find_idx_contuires_as_name(con_2);
+        idx_1 = find_idx_countries_as_name(con_1);
+        idx_2 = find_idx_countries_as_name(con_2);
 
         if(idx_2 < idx_1){
             int temp = idx_2;
@@ -135,90 +204,20 @@ int main(){
 
         temp_idx = pack(std::pair<int,int>(idx_1, idx_2));
 
-        if(!reversed){
-            predicts[temp_idx][0] = l_r;
-            predicts[temp_idx][1] = d_r;
-            predicts[temp_idx][2] = w_r;
+        if(reversed){
+            predicts[temp_idx][win] = l_r;
+            predicts[temp_idx][tie] = t_r;
+            predicts[temp_idx][lose] = w_r;
         }
         else{
-            predicts[temp_idx][0] = w_r;
-            predicts[temp_idx][1] = d_r;
-            predicts[temp_idx][2] = l_r;
+            predicts[temp_idx][win] = w_r;
+            predicts[temp_idx][tie] = t_r;
+            predicts[temp_idx][lose] = l_r;
         }
 
     }
 
-    total_result results[729];
-    int cnt = 0;
-    double temp_prob;
-    for(int i1 = -1; i1 <= 1; i1++){
-    for(int i2 = -1; i2 <= 1; i2++){
-    for(int i3 = -1; i3 <= 1; i3++){
-    for(int i4 = -1; i4 <= 1; i4++){
-    for(int i5 = -1; i5 <= 1; i5++){
-    for(int i6 = -1; i6 <= 1; i6++){
-        results[cnt].result[0] = i1;
-        results[cnt].result[1] = i2;
-        results[cnt].result[2] = i3;
-        results[cnt].result[3] = i4;
-        results[cnt].result[4] = i5;
-        results[cnt].result[5] = i6;
-
-        temp_prob = 1;
-        for(int i = 0; i < 6; i++){
-            //Áï, i¹øÂ° ¸ÅÄ¡ÀÇ °á°ú¿¡ µû¶ó ½Â·üÀ» predict¿¡¼­ °¡Á®¿Â ÈÄ ±× °ªÀ» °öÇØÁÜ
-            temp_prob *= predicts[i][results[cnt].result[i] + 1];
-        }
-
-        results[cnt++].prob = temp_prob;
-    }
-    }
-    }
-    }
-    }
-    }
-
-    std::pair<int, int> pts[4];
-    double cur_prob;
-    for(int i = 0; i < 729; i++){
-        cur_prob = results[i].prob;
-        if(cur_prob == 0.0)
-            continue;
-        
-        clear_points(pts);
-        get_points(results[i].result, pts);
-
-        if(pts[0].first == pts[1].first && pts[1].first == pts[2].first && pts[2].first == pts[3].first){
-            for(int i = 0; i < 4; i++){
-                total_probs[i] += cur_prob / 2;
-            }
-        }
-
-        else if(pts[0].first == pts[1].first && pts[1].first == pts[2].first){
-            total_probs[pts[0].second] += 2 * cur_prob / 3;
-            total_probs[pts[1].second] += 2 * cur_prob / 3;
-            total_probs[pts[2].second] += 2 * cur_prob / 3;
-        }
-        
-        else if(pts[1].first == pts[2].first && pts[2].first == pts[3].first){
-            total_probs[pts[0].second] += cur_prob;
-            total_probs[pts[1].second] += cur_prob / 3;
-            total_probs[pts[2].second] += cur_prob / 3;
-            total_probs[pts[3].second] += cur_prob / 3;
-        }
-        
-        else if(pts[1].first == pts[2].first){
-            total_probs[pts[0].second] += cur_prob;
-            total_probs[pts[1].second] += cur_prob / 2;
-            total_probs[pts[2].second] += cur_prob / 2;
-        }
-
-        else{
-            total_probs[pts[0].second] += cur_prob;
-            total_probs[pts[1].second] += cur_prob;
-        }
-
-    }
+    dfs(1.0, 0);
 
     for(int i = 0; i < 4; i++){
         printf("%lf\n", total_probs[i]);
