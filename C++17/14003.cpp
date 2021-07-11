@@ -1,8 +1,9 @@
-// https://www.acmicpc.net/problem/12015
-// First Written : 20210706
+// https://www.acmicpc.net/problem/14003
+// First Written : 20210711
 // Last Modified : 20210711
 
 #include <cstdio>
+#include <vector>
 
 #define MAXLEN 1000000
 
@@ -10,6 +11,12 @@ int input[MAXLEN+1] = {0};
 
 /* The minumum end value of a subsequence whose length is its idx */
 int endval_per_length[MAXLEN+1] = {0};
+
+/* Index of the endval_per_length */
+int endidx_per_length[MAXLEN+1] = {0};
+
+/* Index of former value corresponding to current subsequence */
+int prev_idx[MAXLEN+1] = {0};
 
 /* Find the index of the certain value */
 int binary_search_idx(int* arr, int left, int right, int val){
@@ -48,10 +55,28 @@ int main(){
         }
 
         /* update the end value as current value */
-        endval_per_length[cur_length] = input[idx];   
+        endval_per_length[cur_length] = input[idx];
+        endidx_per_length[cur_length] = idx;
+
+        prev_idx[idx] = endidx_per_length[cur_length - 1];
+        
     }
 
     printf("%d\n", max_length);
+
+    std::vector<int> LIS;
+    int cur_idx = endidx_per_length[max_length];
+
+    while(cur_idx != 0){
+        LIS.push_back(input[cur_idx]);
+        cur_idx = prev_idx[cur_idx];
+    }
+
+    std::vector<int>::reverse_iterator rit;
+    for(rit = LIS.rbegin(); rit != LIS.rend(); rit++){
+        printf("%d ", *rit);
+    }
+
 
     return 0;
 }
