@@ -1,51 +1,61 @@
 // https://www.acmicpc.net/problem/3955
 // First Written : 20210108
-// Last Modified : 20210108
+// Last Modified : 20210626
 
 #include <cstdio>
 #include <vector>
 
 int get_candy(int K, int C){
-    long long original_K = K;
-    long long original_C = C;
-    int remainder = K % C;
-    std::vector<int>quotients;
+    long long r0 = K;
+    long long r1 = C;
+    long long r2 = K % C;
+    
+    std::vector<int> quotients;
 
-    while(remainder != 0){
-        quotients.push_back(K / C);
-        K = C;
-        C = remainder;
-        remainder = K % C;
+    while(r2 != 0){
+        quotients.push_back(r0 / r1);
+        r0 = r1;
+        r1 = r2;
+        r2 = r0 % r1;
     }
 
-    if(C != 1)
+    if(r1 != 1)
         return -1;
     
-    std::vector<int> x_k;
-    x_k.push_back(1);x_k.push_back(0);
-    std::vector<int> x_c;
-    x_c.push_back(0);x_c.push_back(1);
-    int y_k, y_c;
+    std::vector<int> coeff_K;
+    coeff_K.push_back(1);
+    coeff_K.push_back(0);
+
+    std::vector<int> coeff_C;
+    coeff_C.push_back(0);
+    coeff_C.push_back(1);
+    
+    int next_coeff_K, next_coeff_C;
 
     for(int q:quotients){
-        y_k = x_k[x_k.size() - 2] - q * x_k[x_k.size() - 1];
-        y_c = x_c[x_c.size() - 2] - q * x_c[x_c.size() - 1];
+        next_coeff_K = coeff_K[coeff_K.size() - 2]
+                       - q * coeff_K[coeff_K.size() - 1];
+        
+        next_coeff_C = coeff_C[coeff_C.size() - 2]
+                       - q * coeff_C[coeff_C.size() - 1];
 
-        x_k.push_back(y_k);
-        x_c.push_back(y_c);
+        coeff_K.push_back(next_coeff_K);
+        coeff_C.push_back(next_coeff_C);
 
     }
 
-    long long ans = x_c[x_c.size() - 1];
+    long long X_C = (long long)coeff_C.back();
+    long long neg_X_K = (long long)coeff_K.back();
 
-    while((ans <= 0) || (ans * original_C <= original_K)){
-        ans += original_K;
+    while((X_C <= 0) || (neg_X_K >= 0)){
+        X_C += K;
+        neg_X_K -= C;
     }
 
-    if(ans > 1000000000)
+    if(X_C > 1000000000)
         return -1;
     else
-        return (int)ans;
+        return (int)X_C;
 
 }
 
