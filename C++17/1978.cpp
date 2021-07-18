@@ -1,6 +1,6 @@
 // https://www.acmicpc.net/problem/1978
 // First Written : 20210104
-// Last Modified : 20210104
+// Last Modified : 20210716
 
 #include <cstdio>
 #include <vector>
@@ -10,48 +10,45 @@
 
 using namespace std;
 
-
-
 int main(){
     int N;
     int input;
     int cnt = 0;
-    bool flag;
+    bool is_prime;
     vector<int> primes;
     
     scanf("%d", &N);
     primes.push_back(2);
     
-    for(int i = 3; i < MAX_INPUT; i+= 2){
-        flag = true;
-        for(int div = 2; div < (int)(ceil(sqrt(i))) + 1; div++){
-            if(i % div == 0){
-                flag = false;
+    for(int candidate = 3; candidate < MAX_INPUT; candidate += 2){
+        is_prime = true;
+        for(int divider = 2; divider < (int)(ceil(sqrt(candidate))) + 1; divider++){
+            if(candidate % divider == 0){
+                is_prime = false;
                 break;
             }
         }
-        if(flag)
-            primes.push_back(i);
+        if(is_prime)
+            primes.push_back(candidate);
     }
 
 
     while(N--){
         scanf("%d", &input);
-        flag = false;
+        is_prime = false;
         
         for(auto it:primes){
             if(input == it){
-                flag = true;
+                is_prime = true;
                 break;
             }
         }
 
-        if(flag)
+        if(is_prime)
             cnt++;
- 
     }
+
     printf("%d", cnt);
-    
 
     return 0;
 }
