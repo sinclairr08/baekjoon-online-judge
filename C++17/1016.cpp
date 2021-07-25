@@ -7,56 +7,58 @@
 
 using namespace std;
 
-void add_primes(vector<long long> &primes, long long upper_bdd){
-    primes.push_back(4);
-    bool is_prime;
-
-    for(long long candidate = 3; candidate < upper_bdd + 1; candidate += 2){
-        is_prime = true;
-
-        for(long long divider = 2; divider < ceil(sqrt(candidate)) + 1; divider++){
-            if(candidate % divider == 0){
-                is_prime = false;
-                break;
-            }
-        }
-
-        if(is_prime){
-            primes.push_back(candidate * candidate);
-        }
-    }
-
-    return;
-}
- 
-
 int main(){
-    long long min, max, erat_num;
-    int N, cnt = 0;
+    long long min, max, multiple_sq;
+
     scanf("%lld %lld", &min, &max);
 
-    N = max - min + 1;
+    int N = max - min + 1;
+    int sqrt_max = (int)(ceil(sqrt(max)));
 
-    vector<bool> is_sqprimes(N, true);
+    /* If a[i] is true, then i is prime */
+    vector<bool> is_prime(sqrt_max + 1, true);
+
+    /* If a[i] is true, then "min + i" is not divided by any square number */
+    vector<bool> is_sqprime(N, true);
+
+    /* The vector that stores the squares of the primes under max */
     vector<long long> primes_sq;
+
+    int multiple;
+
+    for(int i = 2; i <= sqrt_max; i++){
+        if(is_prime[i]){
+            multiple = i + i;
+            while(multiple <= sqrt_max){
+                is_prime[multiple] = false;
+                multiple += i;
+            }
+
+        }
+    }
+
+    for(int i = 2; i <= sqrt_max; i++){
+        if(is_prime[i]){
+            primes_sq.push_back((long long)i * (long long)i);
+        }
+    }
     
-    add_primes(primes_sq, (long long)(ceil(sqrt(max))));
     
     for(auto& prime_sq :primes_sq){
-        erat_num = (long long)(ceil(((double)min) / ((double)prime_sq))) * prime_sq;
+        multiple_sq = (long long)(ceil(((double)min) / ((double)prime_sq))) * prime_sq;
 
-        while(erat_num <= max){
-            is_sqprimes[erat_num - min] = false;
-            erat_num += prime_sq;
+        while(multiple_sq <= max){
+            is_sqprime[multiple_sq - min] = false;
+            multiple_sq += prime_sq;
         }
 
     }
-    
-    for(auto iter = is_sqprimes.begin(); iter != is_sqprimes.end(); iter++){
+
+    int cnt = 0;    
+    for(auto iter = is_sqprime.begin(); iter != is_sqprime.end(); iter++){
         if(*iter)
             cnt++;
     }
-   
 
     printf("%d\n", cnt);
 
