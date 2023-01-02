@@ -1,15 +1,13 @@
 # baekjoon-online-judge
 
-Code collection for coding test. Solve the [Baekjoon](https://www.acmicpc.net/) problems.
+Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 
-## Algorithms and Problems
+## 문제별 분류
 
-- Basic I/O: 1000
-- BFS: 1260, 16953, 16930
-- DFS: 1260, 2023
-- KMP: 1786, 16916
-- Prime: 2023
-- DP: 12969, 14238, 17070
-- Simulation: 14719
-- MST: 1197
-- Union-find: 1197
+- 1000 - Basic IO
+
+## 추가할 기능
+
+1. 코드 포맷 자동 생성 스크립트 개발
+2. 세팅 자동 설정 스크립트 개발 (폴더 자동 생성 등)
+3. 문제별 분류 세분화
