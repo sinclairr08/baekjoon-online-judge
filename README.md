@@ -5,6 +5,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 ## 문제별 분류
 
 - 1000 - Basic IO
+- 1037 - Arithmetic
 
 ## 추가할 기능
 
