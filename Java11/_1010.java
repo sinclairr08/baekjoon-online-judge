@@ -32,8 +32,8 @@ public class _1010 {
             bw.write(result + "\n");
         }
 
-        bw.flush();
         br.close();
+        bw.flush();
         bw.close();
     }
     

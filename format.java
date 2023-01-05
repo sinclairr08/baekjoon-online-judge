@@ -3,21 +3,19 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
 public class _XXXX {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        String[] nums = br.readLine().split(" ");
 
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+        int a = Integer.parseInt(nums[0]);
+        int b = Integer.parseInt(nums[1]);
         
-        bw.flush();
-
         br.close();
+        bw.flush();
         bw.close();
     }
     

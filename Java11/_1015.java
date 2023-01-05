@@ -34,8 +34,8 @@ public class _1015 {
             bw.write(results[i] + " ");
         }
         
-        bw.flush();
         br.close();
+        bw.flush();
         bw.close();
     }
     

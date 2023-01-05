@@ -31,9 +31,8 @@ public class _1032 {
 
         }
 
-        bw.flush();
-
         br.close();
+        bw.flush();
         bw.close();
     }
     

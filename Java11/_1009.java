@@ -3,7 +3,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.StringTokenizer;
 
 public class _1009 {
     private static int exponent(int a, int b){
@@ -21,15 +20,14 @@ public class _1009 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st;
 
-        int nums = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
 
-        for(int i = 0; i < nums; i++) {
-            st = new StringTokenizer(br.readLine());
+        for(int i = 0; i < N; i++) {
+            String[] nums = br.readLine().split(" ");
 
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
+            int a = Integer.parseInt(nums[0]);
+            int b = Integer.parseInt(nums[1]);
 
             if (a % 10 == 0) {
                 bw.write("10\n");
@@ -39,8 +37,8 @@ public class _1009 {
             bw.write(exponent(a % 10, b) + "\n");
         }
         
-        bw.flush();
         br.close();
+        bw.flush();
         bw.close();
     }
     
