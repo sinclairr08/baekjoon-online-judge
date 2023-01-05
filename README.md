@@ -7,6 +7,8 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1000 - Basic IO
 - 1001 - Basic IO
 - 1009 - Arithmetic
+- 1010 - Combinatorics
+- 1015 - Sorting
 - 1032 - String
 - 1037 - Arithmetic
 - 1152 - String
