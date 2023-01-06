@@ -4,14 +4,16 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 
 ## 문제별 분류
 
-- 1000 - Basic IO
-- 1001 - Basic IO
+- 1000 - Arithmetic
+- 1001 - Arithmetic
+- 1008 - Arithmetic
 - 1009 - Arithmetic
 - 1010 - Combinatorics
 - 1015 - Sorting
 - 1032 - String
 - 1037 - Arithmetic
 - 1152 - String
+- 9095 - Recurrence Relation
 
 ## 추가할 기능
 
