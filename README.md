@@ -16,7 +16,9 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1037 - Arithmetic
 - 1052 - Binary
 - 1075 - Arithmetic
+- 1149 - DP
 - 1152 - String
+- 6359 - Number Theory
 - 9095 - Recurrence Relation
 
 ## 추가할 기능
