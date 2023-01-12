@@ -16,12 +16,14 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1037 - Arithmetic
 - 1052 - Binary
 - 1065 - Arithmetic
+- 1074 - Recursion
 - 1075 - Arithmetic
 - 1149 - DP
 - 1152 - String
 - 2578 - Simulation
 - 5212 - Simulation
 - 6359 - Number Theory
+- 9080 - Simulation, Conditional Statement
 - 9095 - Recurrence Relation
 - 10172 - Escape character
 
