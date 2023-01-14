@@ -21,7 +21,9 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1149 - DP
 - 1152 - String
 - 1271 - Arithmetic of Large Number
+- 1463 - Memoization
 - 2578 - Simulation
+- 2979 - Simulation
 - 5212 - Simulation
 - 6359 - Number Theory
 - 9080 - Simulation, Conditional Statement
