@@ -22,7 +22,9 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1152 - String
 - 1271 - Arithmetic of Large Number
 - 1463 - Memoization
+- 1966 - Queue
 - 2438 - I/O
+- 2577 - Arithmetic
 - 2578 - Simulation
 - 2979 - Simulation
 - 5212 - Simulation
