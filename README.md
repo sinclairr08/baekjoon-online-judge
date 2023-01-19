@@ -26,6 +26,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2438 - I/O
 - 2577 - Arithmetic
 - 2578 - Simulation
+- 2798 - Brute Force
 - 2979 - Simulation
 - 5212 - Simulation
 - 6359 - Number Theory
@@ -34,6 +35,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 10172 - Escape character
 - 10872 - Arithmetic
 - 11047 - Greedy
+- 11719 - I/O
 - 11720 - I/O
 - 15649 - Backtracking
 - 17478 - Recursion
