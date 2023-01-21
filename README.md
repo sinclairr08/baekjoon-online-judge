@@ -22,6 +22,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1152 - String
 - 1271 - Arithmetic of Large Number
 - 1463 - Memoization
+- 1652 - Simulation
 - 1966 - Queue
 - 2438 - I/O
 - 2577 - Arithmetic
@@ -35,6 +36,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 10172 - Escape character
 - 10872 - Arithmetic
 - 11047 - Greedy
+- 11718 - I/O
 - 11719 - I/O
 - 11720 - I/O
 - 15649 - Backtracking
