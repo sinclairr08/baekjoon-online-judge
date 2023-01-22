@@ -34,6 +34,8 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 9080 - Simulation, Conditional Statement
 - 9095 - Recurrence Relation
 - 10172 - Escape character
+- 10597 - Backtracking
+- 10817 - Arithmetic
 - 10872 - Arithmetic
 - 11047 - Greedy
 - 11718 - I/O
