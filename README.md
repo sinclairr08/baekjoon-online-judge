@@ -38,10 +38,12 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 10817 - Arithmetic
 - 10872 - Arithmetic
 - 11047 - Greedy
+- 11653 - Prime Factorization
 - 11718 - I/O
 - 11719 - I/O
 - 11720 - I/O
 - 15649 - Backtracking
+- 16953 - BFS (?)
 - 17478 - Recursion
 - 26217 - Combinatorics (개선 중)
 - 26607 - Knapsack
