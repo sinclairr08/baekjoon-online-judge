@@ -31,6 +31,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2979 - Simulation
 - 5212 - Simulation
 - 6359 - Number Theory
+- 9012 - Arithmetic
 - 9080 - Simulation, Conditional Statement
 - 9095 - Recurrence Relation
 - 10172 - Escape character
@@ -39,6 +40,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 10872 - Arithmetic
 - 11047 - Greedy
 - 11653 - Prime Factorization
+- 11654 - Ascii code
 - 11718 - I/O
 - 11719 - I/O
 - 11720 - I/O
