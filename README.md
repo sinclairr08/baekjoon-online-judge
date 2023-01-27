@@ -28,12 +28,14 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2438 - I/O
 - 2577 - Arithmetic
 - 2578 - Simulation
+- 2579 - DP
 - 2739 - String
 - 2798 - Brute Force
 - 2979 - Simulation
 - 4673 - Brute Force
 - 5212 - Simulation
 - 6359 - Number Theory
+- 8958 - String
 - 9012 - Arithmetic
 - 9080 - Simulation, Conditional Statement
 - 9095 - Recurrence Relation
