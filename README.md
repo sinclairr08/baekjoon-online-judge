@@ -25,6 +25,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1330 - Arithmetic
 - 1463 - Memoization
 - 1652 - Simulation
+- 1676 - Number Theory
 - 1697 - BFS (DFS ?)
 - 1764 - Sort
 - 1966 - Queue
