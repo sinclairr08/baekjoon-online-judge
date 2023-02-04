@@ -53,6 +53,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 11047 - Greedy
 - 11653 - Prime Factorization
 - 11654 - Ascii code
+- 11659 - Arithmetic
 - 11718 - I/O
 - 11719 - I/O
 - 11720 - I/O
