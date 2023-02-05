@@ -64,6 +64,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 15649 - Backtracking
 - 16953 - BFS (?)
 - 17478 - Recursion
+- 18870 - Sort
 - 26217 - Combinatorics (개선 중)
 - 26607 - Knapsack
 
