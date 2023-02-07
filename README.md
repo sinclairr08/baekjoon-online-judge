@@ -27,6 +27,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1652 - Simulation
 - 1676 - Number Theory
 - 1697 - BFS (DFS ?)
+- 1759 - BackTracking
 - 1764 - Sort
 - 1966 - Queue
 - 2407 - Arithmetic of Large Number
