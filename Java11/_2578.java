@@ -4,16 +4,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-class Pair {
-    public int x;
-    public int y;
-
-    Pair(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-}
-
 public class _2578 {
     public static int check_bingo(int[][] bingo, int x, int y) {
         int sum_x = 0, sum_y = 0;
@@ -37,6 +27,16 @@ public class _2578 {
 
     }
     public static void main(String[] args) throws IOException {
+        class Pair {
+            public int x;
+            public int y;
+        
+            Pair(int x, int y) {
+                this.x = x;
+                this.y = y;
+            }
+        }
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
