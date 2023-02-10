@@ -11,6 +11,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1008 - Arithmetic
 - 1009 - Arithmetic
 - 1010 - Combinatorics
+- 1012 - BFS
 - 1015 - Sorting
 - 1032 - String
 - 1037 - Arithmetic
@@ -35,6 +36,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2577 - Arithmetic
 - 2578 - Simulation
 - 2579 - DP
+- 2753 - Arithmetic
 - 2739 - String
 - 2798 - Brute Force
 - 2839 - Arithmetic
