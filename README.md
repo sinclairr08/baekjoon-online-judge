@@ -52,6 +52,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 10172 - Escape character
 - 10430 - Arithmetic
 - 10597 - Backtracking
+- 10797 - I/O
 - 10817 - Arithmetic
 - 10872 - Arithmetic
 - 11047 - Greedy
