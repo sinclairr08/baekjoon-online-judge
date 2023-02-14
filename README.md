@@ -36,6 +36,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2577 - Arithmetic
 - 2578 - Simulation
 - 2579 - DP
+- 2670 - DP (💦)
 - 2753 - Arithmetic
 - 2739 - String
 - 2798 - Brute Force
@@ -48,7 +49,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 8958 - String
 - 9012 - Arithmetic
 - 9080 - Simulation, Conditional Statement
-- 9084 - Knapsack
+- 9084 - Knapsack (💦)
 - 9095 - Recurrence Relation
 - 10172 - Escape character
 - 10430 - Arithmetic
