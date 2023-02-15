@@ -15,6 +15,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1015 - Sorting
 - 1032 - String
 - 1037 - Arithmetic
+- 1051 - Brute Force
 - 1052 - Binary
 - 1065 - Arithmetic
 - 1074 - Recursion
