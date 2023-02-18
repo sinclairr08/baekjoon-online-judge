@@ -43,6 +43,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2739 - String
 - 2798 - Brute Force
 - 2839 - Arithmetic
+- 2947 - Simulation
 - 2979 - Simulation
 - 3190 - Simulation, Deque
 - 4673 - Brute Force
