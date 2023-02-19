@@ -72,6 +72,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 11726 - Fibonacci Number
 - 11399 - Greedy, Sort
 - 14503 - Simulation
+- 14920 - Simulation
 - 15552 - I/O
 - 15649 - Backtracking
 - 16395 - Combinatorics
