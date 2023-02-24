@@ -50,6 +50,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 4673 - Brute Force
 - 5212 - Simulation
 - 6359 - Number Theory
+- 7576 - BFS
 - 8958 - String
 - 9012 - Arithmetic
 - 9080 - Simulation, Conditional Statement
