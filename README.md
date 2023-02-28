@@ -79,6 +79,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 13458 - Arithmetic
 - 14501 - DP + DFS
 - 14503 - Simulation
+- 14888 - BackTracking
 - 14920 - Simulation
 - 15552 - I/O
 - 15649 - Backtracking
