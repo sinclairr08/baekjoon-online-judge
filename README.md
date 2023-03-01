@@ -76,6 +76,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 11723 - Implementation
 - 11726 - Fibonacci Number
 - 11399 - Greedy, Sort
+- 13335 - Queue
 - 13458 - Arithmetic
 - 14501 - DP + DFS
 - 14503 - Simulation
