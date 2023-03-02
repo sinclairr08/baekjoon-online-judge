@@ -66,6 +66,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 10817 - Arithmetic
 - 10828 - Stack
 - 10872 - Arithmetic
+- 10942 - DP
 - 11047 - Greedy
 - 11653 - Prime Factorization
 - 11654 - Ascii code
