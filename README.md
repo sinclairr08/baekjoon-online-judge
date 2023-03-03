@@ -85,6 +85,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 14920 - Simulation
 - 15552 - I/O
 - 15649 - Backtracking
+- 15989 - DP
 - 16395 - Combinatorics
 - 16953 - BFS (?)
 - 17478 - Recursion
