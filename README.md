@@ -50,6 +50,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 3190 - Simulation, Deque
 - 4673 - Brute Force
 - 5212 - Simulation
+- 5585 - Greedy
 - 6359 - Number Theory
 - 7576 - BFS
 - 8958 - String
