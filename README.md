@@ -13,6 +13,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1010 - Combinatorics
 - 1012 - BFS
 - 1015 - Sorting
+- 1024 - Arithmetic
 - 1032 - String
 - 1037 - Arithmetic
 - 1051 - Brute Force
