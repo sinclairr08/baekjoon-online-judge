@@ -41,6 +41,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2577 - Arithmetic
 - 2578 - Simulation
 - 2579 - DP
+- 2615 - Implementation
 - 2670 - DP (💦)
 - 2753 - Arithmetic
 - 2739 - String
