@@ -24,6 +24,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1149 - DP
 - 1152 - String
 - 1157 - String
+- 1182 - BackTracking
 - 1271 - Arithmetic of Large Number
 - 1330 - Arithmetic
 - 1463 - Memoization
