@@ -21,6 +21,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1065 - Arithmetic
 - 1074 - Recursion
 - 1075 - Arithmetic
+- 1111 - Implementation
 - 1146 - DP, Brute Force
 - 1149 - DP
 - 1152 - String
