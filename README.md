@@ -95,6 +95,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 15989 - DP
 - 16395 - Combinatorics
 - 16953 - BFS (?)
+- 17609 - Greedy
 - 17478 - Recursion
 - 18870 - Sort
 - 20301 - Doubly Linked List
