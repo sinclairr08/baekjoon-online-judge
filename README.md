@@ -40,6 +40,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1764 - Sort
 - 1966 - Queue
 - 2096 - DP
+- 2232 - Greedy
 - 2407 - Arithmetic of Large Number
 - 2438 - I/O
 - 2577 - Arithmetic
@@ -65,6 +66,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 9084 - Knapsack (💦)
 - 9095 - Recurrence Relation
 - 9465 - DP
+- 9997 - DFS, Bit Masking
 - 10103 - Simulation
 - 10172 - Escape character
 - 10430 - Arithmetic
@@ -93,6 +95,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 14920 - Simulation
 - 15552 - I/O
 - 15649 - Backtracking
+- 15738 - Implementation
 - 15989 - DP
 - 16395 - Combinatorics
 - 16953 - BFS (?)
@@ -101,6 +104,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 18870 - Sort
 - 20301 - Doubly Linked List
 - 22864 - Simulation
+- 24431 - Hash
 - 26217 - Combinatorics (개선 중)
 - 26607 - Knapsack
 
