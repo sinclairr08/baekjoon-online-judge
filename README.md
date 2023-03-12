@@ -31,6 +31,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1330 - Arithmetic
 - 1463 - Memoization
 - 1547 - Simulation
+- 1620 - Hash
 - 1629 - Divide and conquer
 - 1652 - Simulation
 - 1676 - Number Theory
