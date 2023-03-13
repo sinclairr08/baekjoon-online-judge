@@ -28,6 +28,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1157 - String
 - 1182 - BackTracking
 - 1271 - Arithmetic of Large Number
+- 1302 - Hash, String
 - 1330 - Arithmetic
 - 1463 - Memoization
 - 1547 - Simulation
