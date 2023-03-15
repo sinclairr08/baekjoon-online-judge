@@ -30,6 +30,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1271 - Arithmetic of Large Number
 - 1302 - Hash, String
 - 1330 - Arithmetic
+- 1351 - Hash, DP
 - 1463 - Memoization
 - 1547 - Simulation
 - 1620 - Hash
