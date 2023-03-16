@@ -46,6 +46,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 2232 - Greedy
 - 2407 - Arithmetic of Large Number
 - 2438 - I/O
+- 2504 - Stack
 - 2577 - Arithmetic
 - 2578 - Simulation
 - 2579 - DP
