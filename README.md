@@ -43,6 +43,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1764 - Sort
 - 1966 - Queue
 - 2096 - DP
+- 2178 - BFS
 - 2232 - Greedy
 - 2407 - Arithmetic of Large Number
 - 2438 - I/O
