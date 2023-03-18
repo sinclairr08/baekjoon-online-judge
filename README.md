@@ -42,6 +42,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1759 - BackTracking
 - 1764 - Sort
 - 1966 - Queue
+- 2037 - Implementation
 - 2096 - DP
 - 2178 - BFS
 - 2232 - Greedy
@@ -105,14 +106,17 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 15989 - DP
 - 16395 - Combinatorics
 - 16953 - BFS (?)
+- 16965 - BFS, Implementation
 - 17609 - Greedy
 - 17478 - Recursion
 - 18870 - Sort
 - 20301 - Doubly Linked List
 - 22864 - Simulation
 - 24431 - Hash
+- 25601 - Hash, Tree
 - 26217 - Combinatorics (개선 중)
 - 26607 - Knapsack
+- 27649 - String, Parsing
 
 ## 추가할 기능
 
