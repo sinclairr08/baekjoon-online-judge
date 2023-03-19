@@ -27,6 +27,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1152 - String
 - 1157 - String
 - 1182 - BackTracking
+- 1253 - Hash (❗)
 - 1271 - Arithmetic of Large Number
 - 1302 - Hash, String
 - 1330 - Arithmetic
@@ -37,7 +38,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1629 - Divide and conquer
 - 1652 - Simulation
 - 1676 - Number Theory
-- 1697 - BFS (DFS ?)
+- 1697 - BFS (❗)
 - 1699 - DP
 - 1759 - BackTracking
 - 1764 - Sort
@@ -105,7 +106,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 15738 - Implementation
 - 15989 - DP
 - 16395 - Combinatorics
-- 16953 - BFS (?)
+- 16953 - BFS (❗)
 - 16965 - BFS, Implementation
 - 17609 - Greedy
 - 17478 - Recursion
@@ -114,9 +115,14 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 22864 - Simulation
 - 24431 - Hash
 - 25601 - Hash, Tree
-- 26217 - Combinatorics (개선 중)
+- 26217 - Combinatorics (❗)
 - 26607 - Knapsack
 - 27649 - String, Parsing
+
+## 표기
+
+- ❗: 더욱 개선해서 다른 아이디어로 다시 풀어 보기
+- 💦: 푼 후에 다른 사람의 코드에 영향을 받아 수정했음. 참고하지 말고 다시 풀어 보기
 
 ## 추가할 기능
 
