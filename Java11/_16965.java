@@ -65,6 +65,8 @@ public class _16965 {
         Section[] sections = new Section[N + 1];
         Section curSection;
         int sectionIdx = 1;
+
+        @SuppressWarnings("unchecked")
         List<Integer>[] movable = new ArrayList[N + 1];
 
         for (int i = 0; i < N; i++) {
