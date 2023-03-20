@@ -67,6 +67,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 5212 - Simulation
 - 5585 - Greedy
 - 6359 - Number Theory
+- 7490 - Backtracking, Implementation
 - 7576 - BFS
 - 8958 - String
 - 9012 - Arithmetic
