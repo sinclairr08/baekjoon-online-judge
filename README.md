@@ -118,6 +118,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 25601 - Hash, Tree
 - 26217 - Combinatorics (❗)
 - 26607 - Knapsack
+- 27114 - Knapsack (❗)
 - 27649 - String, Parsing
 
 ## 표기
