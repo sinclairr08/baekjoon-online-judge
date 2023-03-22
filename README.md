@@ -22,10 +22,12 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1074 - Recursion
 - 1075 - Arithmetic
 - 1111 - Implementation
+- 1141 - String, Sort
 - 1146 - DP, Brute Force
 - 1149 - DP
 - 1152 - String
 - 1157 - String
+- 1181 - String, Sort
 - 1182 - BackTracking
 - 1253 - Hash (❗)
 - 1271 - Arithmetic of Large Number
