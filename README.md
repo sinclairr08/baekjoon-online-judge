@@ -30,6 +30,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1157 - String
 - 1181 - String, Sort
 - 1182 - BackTracking
+- 1251 - String, Sort
 - 1253 - Hash (❗)
 - 1271 - Arithmetic of Large Number
 - 1302 - Hash, String
