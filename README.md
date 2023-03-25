@@ -44,6 +44,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1676 - Number Theory
 - 1697 - BFS (❗)
 - 1699 - DP
+- 1706 - String, Sort, Implementation
 - 1759 - BackTracking
 - 1764 - Sort
 - 1966 - Queue
