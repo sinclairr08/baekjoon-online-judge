@@ -71,6 +71,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 4673 - Brute Force
 - 5212 - Simulation
 - 5585 - Greedy
+- 5635 - Sort, Map
 - 6359 - Number Theory
 - 7490 - Backtracking, Implementation
 - 7576 - BFS
