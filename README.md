@@ -121,6 +121,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 17478 - Recursion
 - 18870 - Sort
 - 20301 - Doubly Linked List
+- 21922 - Simulation, BFS (💲)
 - 22864 - Simulation
 - 24431 - Hash
 - 25601 - Hash, Tree
@@ -133,6 +134,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 
 - ❗: 더욱 개선해서 다른 아이디어로 다시 풀어 보기
 - 💦: 푼 후에 다른 사람의 코드에 영향을 받아 수정했음. 참고하지 말고 다시 풀어 보기
+- 💲: 알고리즘은 유지하면서 최적화 해 보기
 
 ## 추가할 기능
 
