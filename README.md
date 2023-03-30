@@ -11,6 +11,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1008 - Arithmetic
 - 1009 - Arithmetic
 - 1010 - Combinatorics
+- 1011 - Math
 - 1012 - BFS
 - 1015 - Sorting
 - 1024 - Arithmetic
