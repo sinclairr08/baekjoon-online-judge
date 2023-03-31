@@ -118,6 +118,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 16395 - Combinatorics
 - 16953 - BFS (❗)
 - 16965 - BFS, Implementation
+- 16967 - Implementation
 - 17609 - Greedy
 - 17478 - Recursion
 - 18870 - Sort
