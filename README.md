@@ -38,6 +38,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1316 - Implementation
 - 1330 - Arithmetic
 - 1351 - Hash, DP
+- 1427 - Counting Sort
 - 1463 - Memoization
 - 1547 - Simulation
 - 1620 - Hash
