@@ -79,6 +79,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 6359 - Number Theory
 - 7490 - Backtracking, Implementation
 - 7576 - BFS
+- 7682 - Conditional Statement
 - 8958 - String
 - 9012 - Arithmetic
 - 9080 - Simulation, Conditional Statement
