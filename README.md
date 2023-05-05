@@ -50,6 +50,7 @@ Solve the [Baekjoon](https://www.acmicpc.net/) problems.
 - 1706 - String, Sort, Implementation
 - 1759 - BackTracking
 - 1764 - Sort
+- 1912 - DP
 - 1966 - Queue
 - 2037 - Implementation
 - 2096 - DP
